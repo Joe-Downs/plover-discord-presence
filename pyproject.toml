@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+  {name = "Joe Downs", email = "joe@dwns.dev"}
+]
+name = "plover-discord-presence"
+description = "A Discord rich presence plugin for Plover"
+keywords = ["plover", "plover_plugin"]
+readme = "README.md"
+version = "0.0.1"
+
+[tool.setuptools.packages.find]
+where = ["src/"]
+include = ["plover_discord_presence"]
+
+[project.urls]
+Issues = "https://github.com/Joe-Downs/plover-discord-presence/issues"
+Repository = "https://github.com/Joe-Downs/plover-discord-presence"
+
+[plover.extension]
+#start_extension = "plover_rpc:Start"
+example_extension = "plover_rpc.main"
